@@ -1,0 +1,50 @@
+<body>
+  <div class="login">
+    <form [formGroup]="loginForm">
+      <h1>Iniciar sesion para acceder a diferentes cursos!</h1>
+      <div class="form">
+        <div>
+          <mat-form-field>
+            <mat-label>Acceder como</mat-label>
+            <mat-select formControlName="auth" matNativeControl required>
+              <mat-option value="admin">Admin</mat-option>
+              <mat-option value="user">User</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field>
+            <input
+              matInput
+              formControlName="email"
+              type="email"
+              name="email"
+              placeholder="Email"
+              required="required"
+            />
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field>
+            <input
+              matInput
+              formControlName="password"
+              type="password"
+              name="password"
+              placeholder="Password"
+              required="required"
+            />
+          </mat-form-field>
+        </div>
+
+        <div>
+          <button mat-button color="accent" type="submit" (click)="login()">
+            Iniciar sesion
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>

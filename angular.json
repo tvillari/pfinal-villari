@@ -35,6 +35,9 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap-grid.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap-utilities.min.css",
+              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": []

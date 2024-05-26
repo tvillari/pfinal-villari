@@ -1,0 +1,28 @@
+<h2 mat-dialog-title>Crear usuario</h2>
+
+<div mat-dialog-content>
+  <form [formGroup]="userForm">
+    <div class="row">
+      <div class="col-6">
+        <mat-form-field class="w-100">
+          <mat-label> Nombre del curso </mat-label>
+          <input formControlName="courseName" matInput />
+          <mat-error>
+            {{ userForm.errors | formFieldValidationErrors }}
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <mat-form-field class="w-100">
+          <mat-label> Precio </mat-label>
+          <input formControlName="price" matInput />
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+
+  <div class="d-flex justify-content-end" mat-dialog-actions>
+    <button mat-button mat-dialog-close>Cancelar</button>
+    <button mat-button (click)="onSave()">Guardar</button>
+  </div>
+</div>

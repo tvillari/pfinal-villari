@@ -1,0 +1,29 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <mat-nav-list *ngIf="user">
+      <a routerLink="home" mat-list-item> inicio </a>
+      <a routerLink="inscription" mat-list-item> inscripcion Cursos </a>
+    </mat-nav-list>
+    <mat-nav-list *ngIf="admin">
+      <a routerLink="users" mat-list-item> Usuarios </a>
+      <a routerLink="cursos" mat-list-item> Cursos </a>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <mat-toolbar color="accent">
+      <button
+        (click)="drawer.toggle()"
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with menu icon"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <main style="padding: 1rem">
+      <router-outlet />
+    </main>
+  </div>
+</mat-drawer-container>
