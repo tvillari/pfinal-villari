@@ -1,13 +1,19 @@
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side">
     <mat-nav-list *ngIf="user">
-      <a routerLink="home" mat-list-item> inicio </a>
-      <a routerLink="inscription" mat-list-item> inscripcion Cursos </a>
+      <a routerLink="home" mat-list-item> Inicio </a>
+      <a routerLink="inscription" mat-list-item> Inscripcion a cursos </a>
     </mat-nav-list>
     <mat-nav-list *ngIf="admin">
       <a routerLink="users" mat-list-item> Usuarios </a>
       <a routerLink="cursos" mat-list-item> Cursos </a>
     </mat-nav-list>
+
+    <!-- <div>
+      <button (click)="logout()" class="button-out" mat-button>
+        Cerrar sesion
+      </button>
+    </div> -->
   </mat-drawer>
 
   <div class="example-sidenav-content">

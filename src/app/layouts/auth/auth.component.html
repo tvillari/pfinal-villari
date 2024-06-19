@@ -6,7 +6,12 @@
         <div>
           <mat-form-field>
             <mat-label>Acceder como</mat-label>
-            <mat-select formControlName="auth" matNativeControl required>
+            <mat-select
+              [(ngModel)]="selectValue"
+              formControlName="auth"
+              matNativeControl
+              required
+            >
               <mat-option value="admin">Admin</mat-option>
               <mat-option value="user">User</mat-option>
             </mat-select>

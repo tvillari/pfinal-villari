@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CursosService } from '../cursos/cursos.service';
 import { ICursos } from '../cursos/models';
-import { Dialog } from '@angular/cdk/dialog';
 import { MatDialog } from '@angular/material/dialog';
 import { InscriptionDialogComponent } from './inscription-dialog/inscription-dialog.component';
 
